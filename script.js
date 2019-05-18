@@ -71,3 +71,24 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function login(form) {
+    var ajax = new XMLHttpRequest();
+    ajax.onreadystatechange = function() {
+        if (ajax.readyState == 4 && ajax.status == 200) {
+            var data = JSON.parse(this.responseText);
+            var database = data.role;
+            if (database == 1) {
+                hasAccount = true;
+            } else if (database == 0) {
+                alert("INVALID USERNAME AND PASSWORD");
+            }
+            return;
+        }
+    }
+    ajax.open("POST", "index.php", true);
+    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajax.send("request_id=LOGIN" +
+        "&username=" + form.username.value +
+        "&password=" + form.password.value);
+}
