@@ -77,7 +77,7 @@ function login(form) {
     ajax.onreadystatechange = function() {
         if (ajax.readyState == 4 && ajax.status == 200) {
             var data = JSON.parse(this.responseText);
-            var database = data.role;
+            var database = data.ID;
             if (database == 1) {
                 hasAccount = true;
             } else if (database == 0) {
