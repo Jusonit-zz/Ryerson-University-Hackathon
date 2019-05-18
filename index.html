@@ -90,7 +90,8 @@
                 let formData = new FormData();
                 formData.append('indicator', 'testconnection');
 
-                return fetch('35.196.158.3/accessDatabase.php', {
+                //return fetch('35.196.158.3/accessDatabase.php', {
+                return fetch('db.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
