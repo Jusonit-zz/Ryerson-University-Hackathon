@@ -80,6 +80,7 @@ function login(form) {
             var database = data.ID;
             if (database == 1) {
                 hasAccount = true;
+		alert("SUCCESSFUL");
             } else if (database == 0) {
                 alert("INVALID USERNAME AND PASSWORD");
             }
