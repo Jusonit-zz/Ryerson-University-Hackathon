@@ -1,13 +1,27 @@
+// users must have an accoutn
 
+var hasAccount = false;
 
 document.addEventListener('click',function(e){
+
             if (e.target && e.target.id== 'btn1') {
-              alert("creating and event");
-				document.getElementById('create').style.display = "block";
+
+              if ( !hasAccount){
+                alert("You must have an account before you can create a event");
+              }
+
+              else{
+                alert("creating and event");
+                window.location.replace("RUHack-master\RUHack-master\formEvent.html");
+          document.getElementById('create').style.display = "block";
+
+
+              }
 
             }
             else if (e.target && e.target.id== 'btn2') {
                 // do something here when create event button is clicked
+                hasAccount = true;
                 alert("login or signup!");
             }
 			//Function to Hide Popup
