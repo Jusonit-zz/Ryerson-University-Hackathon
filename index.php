@@ -30,12 +30,12 @@ function route($data)
 				$db = new DB();
 				$conn = $db->get_connection();
 				$result = $conn->query("SELECT * FROM profiles WHERE username = '$user' AND password = '$pass'");
-				$role = $result->num_rows > 0 ? 1 : 0;
+				$role = $result->num_rows > 0 ? $result->fetch_array()['ID'] : 0;
 				$conn->close();
 				return $role;
 			}
 			 $response = verify_credentials($data["username"], $data["password"]);
-            echo json_encode(array("role" => $response));
+            echo json_encode(array("ID" => $response));
 			break;
         //DEFAULT
         default:
