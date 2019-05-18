@@ -1,0 +1,26 @@
+<style>
+    p {
+        font-family: "Lucida Console";
+    }
+    h1 {
+        font-family: "Lucida Console";
+    }
+    .btn {
+        display: inline-block;
+        text-align: center;
+        border: 1px solid #142846;
+        border-radius: .25em;
+        padding: .25em 1em;
+        background-color: #43709F;
+        color: #fff;
+        font-size: 20px;
+        box-shadow: 0 .125em 0 0em #7B99B5;
+        -webkit-transition: all .15s;
+        transition: all .15s;
+        will-change: transform;
+        width: 120px;
+        height: 36px;
+    }
+
+
+</style>

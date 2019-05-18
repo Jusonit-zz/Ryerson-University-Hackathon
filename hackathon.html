@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <!-- just the header part where we can store CSS... we can also do this in a CSS file -->
+
+    <link rel="stylesheet" href="mainPage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <head>
+        <h1>Clean & Green Information Exchange</h1>
+        <!-- <style>
+            p {
+                font-family: "Lucida Console";
+            }
+            h1 {
+                font-family: "Lucida Console";
+            }
+            .btn {
+                display: inline-block;
+                text-align: center;
+                border: 1px solid #142846;
+                border-radius: .25em;
+                padding: .25em 1em;
+                background-color: #43709F;
+                color: #fff;
+                font-size: 20px;
+                box-shadow: 0 .125em 0 0em #7B99B5;
+                -webkit-transition: all .15s;
+                transition: all .15s;
+                will-change: transform;
+                width: 120px;
+                height: 36px;
+            }
+
+
+        </style> -->
+    </head>
+    <body>
+
+    <div class="jumbotron">
+      <div style="float:right;">
+          Login or Signup!
+          <button class="btn" id="btn2" type="button">Login/Signup!</button>
+      </div>
+      <div>
+          Create an Event!
+          <button class="btn" id="btn1" type="button">Create!</button>
+      </div>
+</div>
+
+        <!-- this is the header area - with buttons for creating account & creating event -->
+        <div id="div1">
+            <div style="float:right;">
+                Login or Signup!
+                <button class="btn" id="btn2" type="button">Login/Signup!</button>
+            </div>
+            <div>
+                Create an Event!
+                <button class="btn" id="btn1" type="button">Create!</button>
+            </div>
+        </div>
+        
+
+        <!-- to add space between sections -->
+        <br><br>
+
+        <!-- this is where list of entries will be displayed -->
+        <!-- below is a SAMPLE list of entries, just for testing -->
+        <div id="div2">
+            <div id="entry1" style="border:1px solid black;">
+                <p>Volunteer at the Park this Saturday!</p>
+            </div>
+            <div id="entry2" style="border:1px solid black;">
+                <p>Hackathon volunteers needed!</p>
+            </div>
+            <div id="entry3" style="border:1px solid black;">
+                <p>Campus grounds cleanup at 5pm next Weds!</p>
+            </div>
+            <div id="entry4" style="border:1px solid black;">
+                <p>Recycling information session at Student Center!</p>
+            </div>
+        </div>
+    </body>
+    
+   		<form id= "create" style="display: none;">
+            Enter in information for the Event:<br>
+        <input type="text" name="firstname"><br>
+            Enter in the loation for the event:<br>
+        <input type="text" name="lastname">
+		
+   </body>
+
+    <!-- where we are going to put our javascript for the page -->
+	<script type="text/javascript" src="script.js"></script>
+</html>
