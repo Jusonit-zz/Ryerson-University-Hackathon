@@ -68,3 +68,20 @@ function login(form) {
     ajax.send("request_id=LOGIN" + "&username=" + form.username.value + "&password=" + form.password.value);
 }
 
+function login2(form) {
+
+    return fetch('index.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: form,
+        mode: 'no-cors'
+    })
+    .then((res) => res.json())
+    .then((response) => {     
+        console.log("response : ");   
+        console.log(response);
+    }); // end of fetch
+}
+
