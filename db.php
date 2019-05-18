@@ -1,5 +1,7 @@
 <?php
 
+    echo "before class";
+
     Class DB{
         function get_connection(){
             // STEP 01: Read configuration file
@@ -15,7 +17,7 @@
             } else {
                 $result = "failure";
             }
-
+            echo $result;
             // added this
             $arr = array("results" => $result);
             echo json_encode($arr);
@@ -24,5 +26,7 @@
             return $conn;
         }
     }
+
+    echo "after class";
 
 ?>
