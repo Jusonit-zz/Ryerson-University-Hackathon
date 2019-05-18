@@ -2,36 +2,6 @@
 
 var hasAccount = false;
 
-document.addEventListener('click',function(e){
-
-            if (e.target && e.target.id== 'btn1') {
-
-              if ( !hasAccount){
-                alert("You must have an account before you can create a event");
-              }
-
-              else{
-                alert("creating and event");
-                window.location.replace("RUHack-master\RUHack-master\formEvent.html");
-          document.getElementById('create').style.display = "block";
-
-
-              }
-
-            }
-            else if (e.target && e.target.id== 'btn2') {
-                // do something here when create event button is clicked
-                hasAccount = true;
-                alert("login or signup!");
-            }
-			//Function to Hide Popup
-			function div_hide(){
-			document.getElementById('create').style.display = "none";
-			}
-        }); // end of document listener
-
-
-
 // add java sript of the event handlerers for the events the Modal
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -80,7 +50,7 @@ function login(form) {
             var database = data.ID;
             if (database == 1) {
                 hasAccount = true;
-		alert("SUCCESSFUL");
+				alert("SUCCESSFUL");
             } else if (database == 0) {
                 alert("INVALID USERNAME AND PASSWORD");
             }
@@ -89,7 +59,5 @@ function login(form) {
     }
     ajax.open("POST", "index.php", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    ajax.send("request_id=LOGIN" +
-        "&username=" + form.username.value +
-        "&password=" + form.password.value);
+    ajax.send("request_id=LOGIN" + "&username=" + form.username.value + "&password=" + form.password.value);
 }
