@@ -1,6 +1,3 @@
-// users must have an accoutn
-
-var hasAccount = false;
 
 // add java sript of the event handlerers for the events the Modal
 // Get the modal
@@ -33,7 +30,6 @@ function login(form) {
             var data = JSON.parse(this.responseText);
             var database = data.ID;
             if (database == 1) {
-                hasAccount = true;
 				alert("SUCCESSFUL");
             } else if (database == 0) {
                 alert("INVALID USERNAME AND PASSWORD");
@@ -41,7 +37,7 @@ function login(form) {
             return;
         }
     }
-    ajax.open("POST", "index.php", true);
+    ajax.open("POST", "login.php", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	console.log(form.username.value);
 	console.log(form.password.value);
