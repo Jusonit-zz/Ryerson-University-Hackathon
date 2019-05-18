@@ -43,5 +43,7 @@ function login(form) {
     }
     ajax.open("POST", "index.php", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	echo form.username.value;
+	echo form.password.value;
     ajax.send("request_id=LOGIN" + "&username=" + form.username.value + "&password=" + form.password.value);
 }
