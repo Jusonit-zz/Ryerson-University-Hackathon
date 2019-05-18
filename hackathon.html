@@ -13,8 +13,18 @@
         <!-- this is the header area - with buttons for creating account & creating event -->
         <div id="div1">
             <div style="float:right;">
-                Login or Signup!
-                <button class="btn" id="btn2" type="button">Login/Signup!</button>
+						<!-- some description? -->
+                <button class="btn" id="btn2" type="button">Sign Up!</button>
+						<h4 id='date' /> 
+							<h4 class = "login" style="display: block"> 
+								<form class="login-form">
+								<input type="text" placeholder="Username" id="username">  <br />
+								<input type="password" placeholder="Password" id="password"> <br /> 
+								<!IMPLEMENT THE LOGIN> 
+								<input type="button" onclick="login(this.form);" value="Login"> 
+								<br> </br>
+								</form>
+							</h4>
             </div>
             <div>
                 Create an Event!
