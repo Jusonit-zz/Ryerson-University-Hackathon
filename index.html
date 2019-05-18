@@ -72,9 +72,19 @@
                 // do something here when create event button is clicked
                 alert("create an event!");
 
+                var dbConnection = SQL.connect( { Driver: "MySQL",
+                    Host: "35.196.158.3",
+                    Port: 3306,
+                    Database: "test",
+                    UserName: "francis",
+                    Password: "something" } );
+
+
+                
+
             }
 
-            if (e.target && e.target.id== 'btn1') {
+            if (e.target && e.target.id== 'btn2') {
 
                 // do something here when create event button is clicked
                 alert("login or signup!");
