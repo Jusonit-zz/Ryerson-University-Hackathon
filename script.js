@@ -78,7 +78,8 @@ function login2(form) {
         body: form,
         mode: 'no-cors'
     })
-    .then((res) => res.json())
+    //.then((res) => res.json())
+    .then((res) => res)
     .then((response) => {     
         console.log("response : ");   
         console.log(response);
