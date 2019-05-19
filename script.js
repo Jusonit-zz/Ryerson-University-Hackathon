@@ -27,7 +27,7 @@ function login(form) {
     var ajax = new XMLHttpRequest();
     ajax.onreadystatechange = function() {
         if (ajax.readyState == 4 && ajax.status == 200) {
-            var data = JSON.parse('this.responseText');
+            var data = JSON.parse(this.responseText);
             var database = data.ID;
             if (database == 1) {
 				alert("SUCCESSFUL");
