@@ -27,7 +27,7 @@ function login(form) {
     var ajax = new XMLHttpRequest();
     ajax.onreadystatechange = function() {
         if (ajax.readyState == 4 && ajax.status == 200) {
-            var data = JSON.parse(this.responseText);
+            var data = JSON.parse('this.responseText');
             var database = data.ID;
             if (database == 1) {
 				alert("SUCCESSFUL");
@@ -39,7 +39,5 @@ function login(form) {
     }
     ajax.open("POST", "middle.php", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	console.log(form.username.value);
-	console.log(form.password.value);
     ajax.send("request_id=LOGIN" + "&username=" + form.username.value + "&password=" + form.password.value);
 }
