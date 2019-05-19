@@ -28,6 +28,7 @@ function login(form) {
     ajax.onreadystatechange = function() {
         if (ajax.readyState == 4 && ajax.status == 200) {
             var data = JSON.parse(this.responseText);
+	    var_dump(data);
             var database = data.ID;
             if (database == 1) {
 				alert("SUCCESSFUL");
