@@ -37,46 +37,9 @@ function login(form) {
             return;
         }
     }
-    ajax.open("POST", "login.php", true);
+    ajax.open("POST", "middle.php", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
+	console.log(form.username.value);
+	console.log(form.password.value);
     ajax.send("request_id=LOGIN" + "&username=" + form.username.value + "&password=" + form.password.value);
-}
-
-function login(form) {
-    var ajax = new XMLHttpRequest();
-    ajax.onreadystatechange = function() {
-        if (ajax.readyState == 4 && ajax.status == 200) {
-            var data = JSON.parse(this.responseText);
-            var database = data.ID;
-            if (database == 1) {
-                hasAccount = true;
-				alert("SUCCESSFUL");
-            } else if (database == 0) {
-                alert("INVALID USERNAME AND PASSWORD");
-            }
-            return;
-        }
-    }
-    ajax.open("POST", "index.php", true);
-    ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    ajax.send("request_id=LOGIN" + "&username=" + form.username.value + "&password=" + form.password.value);
-}
-
-function login2(form) {
-
-    return fetch('index.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: form,
-        mode: 'no-cors'
-    })
-    //.then((res) => res.json())
-    .then((res) => res)
-    .then((response) => {
-        console.log("response : ");
-        console.log(response);
-    }); // end of fetch
 }
