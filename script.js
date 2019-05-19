@@ -43,7 +43,7 @@ function login(form) {
     }
     ajax.open("POST", "index.php", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    
+
     ajax.send("request_id=LOGIN" + "&username=" + form.username.value + "&password=" + form.password.value);
 }
 
@@ -64,7 +64,7 @@ function login(form) {
     }
     ajax.open("POST", "index.php", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    
+
     ajax.send("request_id=LOGIN" + "&username=" + form.username.value + "&password=" + form.password.value);
 }
 
@@ -80,9 +80,8 @@ function login2(form) {
     })
     //.then((res) => res.json())
     .then((res) => res)
-    .then((response) => {     
-        console.log("response : ");   
+    .then((response) => {
+        console.log("response : ");
         console.log(response);
     }); // end of fetch
 }
-
